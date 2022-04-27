@@ -1,4 +1,3 @@
-import Link from "../../utils/Link"
 import Accordion from "./components/Accordion"
 import TextAccordion from "./contents/TextAccordion.js"
 import CardsAccordion from "./contents/CardsAccordion.js"
