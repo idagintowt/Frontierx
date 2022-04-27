@@ -6,14 +6,28 @@ module.exports = {
   theme: {
     fontSize: {
       xs: [
-        '14px', '19.12px'
+        '0.875rem', '1.195rem'
       ],
       sm: [
-        '15px', '20px'
+        '0.938rem', '1.25rem'
       ],
-      xl: ['45px', '61.47px']
+      xl: ['2.813rem', '3.842rem']
     },
     extend: {
+      gridTemplateColumns: {
+        'nav': '20% 80%'
+      },
+      screens: {
+        'grid-break': {
+          'max': '1300px'
+        },
+        'm': {
+          'max': '1550px'
+        },
+        'xs': {
+          'max': '640px'
+        }
+      },
       keyframes: {
         'fade-in': {
           '0%': {
@@ -28,7 +42,7 @@ module.exports = {
         'fade-in': 'fade-in 0.8s ease-in'
       },
       fontSize: {
-        xxs: "13px"
+        xxs: "0.813rem"
       },
       colors: {
         'dark-grey': '#0D0D0D',

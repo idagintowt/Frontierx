@@ -11,7 +11,7 @@ const InfoIcon = () => {
 const AccordionTitle = ({isOpen, toggleAccordion, title, info}) => {
   const Tooltip = withTooltip(InfoIcon)
 
-  return <div className="h-[4.75rem] flex justify-between items-center font-extrabold">
+  return <div className="h-[3.35rem] flex justify-between items-end font-extrabold">
     <div className="flex">
       <IconText img="system" text={title}/> {info.length > 0 && <Tooltip content={info}/>}
     </div>
@@ -24,10 +24,12 @@ const AccordionTitle = ({isOpen, toggleAccordion, title, info}) => {
 }
 
 const AccordionContent = ({isOpen, children}) => {
-  return <div className={`${isOpen
-      ? "max-h-[22.625rem] "
-      : "max-h-0"} transition-[max-height] ease-in-out duration-700 overflow-hidden`}>
-    <div className="pb-[1.875rem] h-fit">{children}</div>
+  return <div className="pb-[1.45rem]">
+    <div className={`${isOpen
+        ? "max-h-[21.375rem]"
+        : "max-h-0"} transition-[max-height] ease-in-out duration-700 overflow-y-scroll overflow-x-hidden`}>
+      <div className="mt-[1.2rem] h-fit">{children}</div>
+    </div>
   </div>
 }
 

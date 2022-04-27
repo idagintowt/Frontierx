@@ -6,7 +6,7 @@ import DescriptionSection from '../components/Sections/DescriptionSection/Descri
 import AccordionsSection from '../components/Sections/AccordionsSection/AccordionsSection'
 
 export default function Home() {
-  return (<div className="w-[90rem] mx-auto my-0">
+  return (<div className="lg:w-[75%] md:w-[90%] sm:w-full xs:w-full mx-auto my-0">
     <Head className="h-[1307px]">
       <title>Frontierx test app</title>
     </Head>

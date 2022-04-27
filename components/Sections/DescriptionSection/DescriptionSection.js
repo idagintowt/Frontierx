@@ -8,7 +8,7 @@ const Button = ({img, text, value, setValue, activeValue}) => {
   const color = activeValue === value
     ? "dark-grey"
     : "dark-violet"
-  return <button className={`w-[11.5rem] h-[3.125rem] bg-${color}
+  return <button className={`lg:w-[11.5rem] sm:w-[11rem] xs:w-[9rem] h-[3.125rem] bg-${color}
     rounded-sm flex items-center
     justify-center text-sm transition-colors ease-linear duration-200 hover:bg-dark-grey`} onClick={() => setValue(value)}>
     <IconText img={img} text={text}/>
@@ -21,7 +21,7 @@ const Buttons = ({setValue, activeValue}) => {
       return <Button key={index} setValue={setValue} activeValue={activeValue} value={index} text={data.button} img={data.img}/>
     })
   }
-  return <div className="w-[37rem] flex justify-between mt-[3rem]">
+  return <div className="lg:w-[37rem] sm:w-[35rem] xs:w-[29rem] flex justify-between mt-[3rem]">
     {renderButtons()}
   </div>
 }
@@ -46,7 +46,7 @@ const Description = ({data, activeValue}) => {
 export default function DescriptionSection() {
   const [activeValue, setValue] = React.useState(1)
 
-  return <section className="pt-20 pb-3 bg-dark-grey relative bg-transparent text-center flex flex-col items-center">
+  return <section className="lg:pt-20 m:pt-16md:pt-16 sm:pt-14 xs:pt-12 pb-3 bg-dark-grey relative bg-transparent text-center flex flex-col items-center">
     <Description data={DescriptionData[activeValue]} activeValue={activeValue}/>
     <Buttons setValue={setValue} activeValue={activeValue}/>
   </section>;
