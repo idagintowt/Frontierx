@@ -18,7 +18,7 @@ const Buttons = () => {
     {
       [...Array(3)].map((i, index) => {
         return <button key={index} className="font-extrabold text-sm cursor-pointer p-[0.625rem] h-full transition-[border] ease-linear duration-200 border-[transparent] border-b-2 border-solid hover:border-hover-btn">
-          Lorems
+          Lorem
         </button>
       })
     }
